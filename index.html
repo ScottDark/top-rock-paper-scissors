@@ -9,7 +9,7 @@
       let computerSelection;
       let playerSelection;
 
-      //   Random computer choice eg. rock, paper, scissors
+      // Random computer choice eg. rock, paper, scissors
 
       function getComputerChoice(min, max) {
         computerSelection = Math.floor(Math.random() * (max - min + 1) + min);
@@ -18,50 +18,49 @@
 
         switch (computerSelection) {
           case 1:
-            console.log("Computer chose: Rock");
+            console.log("Computer chose: Rock!");
             return computerSelection;
             break;
 
           case 2:
-            console.log("Computer chose: Paper");
+            console.log("Computer chose: Paper!");
             return computerSelection;
             break;
 
           case 3:
-            console.log("Computer chose: Scissors");
+            console.log("Computer chose: Scissors!");
             return computerSelection;
             break;
           default:
             console.log("Error selecting computer choice.");
         }
-        return computerSelection;
       }
       // Prompt user Rock, Paper. Scissors selection
 
       function getPlayerChoice() {
-        playerSelection = prompt(
+        playerSelection = +prompt(
           "Select choice:\n1 - Rock \n2 - Paper \n3 - Scissors"
         );
         switch (playerSelection) {
-          case "1":
+          case 1:
             console.log("You chose Rock!");
             // Convert to number before returning
-            return Number(playerSelection);
+            return playerSelection;
             break;
 
-          case "2":
+          case 2:
             console.log("You chose Paper!");
-            return Number(playerSelection);
+            return playerSelection;
             break;
 
-          case "3":
+          case 3:
             console.log("You chose Scissors!");
-            return Number(playerSelection);
+            return playerSelection;
             break;
 
           default:
             // No selection made or wrong selection, alert user
-            if (playerSelection === null) {
+            if (playerSelection === 0) {
               alert("Exiting game, reload to try again");
             } else {
               alert("Please select either 1, 2, 3");
@@ -70,12 +69,22 @@
         }
       }
 
+      // Play a round
+      function playOneRound(playerSelection, computerSelection) {
+        // Round is a tie display result to console
+        if (
+          (playerSelection === 1 && computerSelection === 1) ||
+          (playerSelection === 2 && computerSelection === 2) ||
+          (playerSelection === 3 && computerSelection === 3)
+        ) {
+          console.log("Tie!");
+        }
+      }
+
       // Call function to get player and computer choice
       getPlayerChoice();
       getComputerChoice(1, 3);
-
-      // Play a round
-      function playOneRound(playerSelection, computerSelection) {}
+      playOneRound(playerSelection, computerSelection);
     </script>
   </head>
   <body></body>
