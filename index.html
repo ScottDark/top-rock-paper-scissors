@@ -75,39 +75,48 @@
       }
 
       // Play a round
-      function playOneRound(playerSelection, computerSelection) {
+      function playRound(playerSelection, computerSelection) {
         switch (playerSelection) {
           // Game Logic
           // Player Rock
           case 1:
             if (computerSelection === ROCK) {
-              console.log("Tie!");
+              //   console.log("Tie!");
+              return (roundResults = "Tie");
             } else if (computerSelection === PAPER) {
-              console.log("You lose!");
+              //   console.log("You lose!");
+              return (roundResults = "You lose");
             } else {
-              console.log("You win!");
+              //   console.log("You win!");
+              return (roundResults = "You win!");
             }
             break;
 
           // Player Paper
           case 2:
             if (computerSelection === PAPER) {
-              console.log("Tie!");
+              //   console.log("Tie!");
+              return (roundResults = "Tie");
             } else if (computerSelection === ROCK) {
-              console.log("You win!");
+              //   console.log("You win!");
+              return (roundResults = "You win!");
             } else {
-              console.log("You lose!");
+              //   console.log("You lose!");
+              return (roundResults = "You lose");
             }
             break;
 
           // Player Scissors
           case 3:
             if (computerSelection === SCISSORS) {
-              console.log("Tie!");
+              //   console.log("Tie!");
+              return (roundResults = "Tie");
             } else if (computerSelection === ROCK) {
-              console.log("You lose!");
+              //   console.log("You lose!");
+              return (roundResults = "You lose");
             } else {
-              console.log("You win!");
+              //   console.log("You win!");
+              return (roundResults = "You win!");
             }
             break;
 
@@ -123,7 +132,7 @@
         getComputerChoice(1, 3);
       }
 
-      playOneRound(playerSelection, computerSelection);
+      playRound(playerSelection, computerSelection);
     </script>
   </head>
   <body></body>
