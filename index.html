@@ -37,21 +37,22 @@
       // Prompt user Rock, Paper. Scissors selection
 
       function getPlayerChoice() {
-        playerSelection = +prompt(
+        playerSelection = prompt(
           "Select choice:\n1 - Rock \n2 - Paper \n3 - Scissors"
         );
         switch (playerSelection) {
-          case 1:
+          case "1":
             console.log("You chose Rock!");
-            return +playerSelection;
+            // Convert to number before returning
+            return Number(playerSelection);
             break;
-          case 2:
+          case "2":
             console.log("You chose Paper!");
-            return playerSelection;
+            return Number(playerSelection);
             break;
-          case 3:
+          case "3":
             console.log("You chose Scissors!");
-            return playerSelection;
+            return Number(playerSelection);
             break;
           default:
             // No selection made or wrong selection alert user.
