@@ -131,6 +131,7 @@
         // 5 Rounds for 1 game
         for (let i = 1; i < 6; i++) {
           console.log(`Round ${i}`);
+
           // Call function to get player and computer choice
           getPlayerChoice();
           // If player exits game then don't get computer function
@@ -142,6 +143,8 @@
           console.log(roundResults);
           // Counts round wins
           countRoundResults(roundResults);
+          // Adds space to the console for readability
+          console.log(" ");
         }
         console.log(
           `Game Results: You have won ${roundCounter} out of 5 rounds!`
