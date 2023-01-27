@@ -6,8 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TOP Project - Rock-Paper-Scissors</title>
     <script>
+      // Variables
+      const ROCK = 1;
+      const PAPER = 2;
+      const SCISSORS = 3;
+
       let computerSelection;
       let playerSelection;
+      let roundResults;
 
       // Random computer choice eg. rock, paper, scissors
 
@@ -70,13 +76,43 @@
 
       // Play a round
       function playOneRound(playerSelection, computerSelection) {
-        // Round is a tie display result to console
-        if (
-          (playerSelection === 1 && computerSelection === 1) ||
-          (playerSelection === 2 && computerSelection === 2) ||
-          (playerSelection === 3 && computerSelection === 3)
-        ) {
-          console.log("Tie!");
+        switch (playerSelection) {
+          // Game Logic
+          // Player Rock
+          case 1:
+            if (computerSelection === ROCK) {
+              console.log("Tie!");
+            } else if (computerSelection === PAPER) {
+              console.log("You lose!");
+            } else {
+              console.log("You win!");
+            }
+            break;
+
+          // Player Paper
+          case 2:
+            if (computerSelection === PAPER) {
+              console.log("Tie!");
+            } else if (computerSelection === ROCK) {
+              console.log("You win!");
+            } else {
+              console.log("You lose!");
+            }
+            break;
+
+          // Player Scissors
+          case 3:
+            if (computerSelection === SCISSORS) {
+              console.log("Tie!");
+            } else if (computerSelection === ROCK) {
+              console.log("You lose!");
+            } else {
+              console.log("You win!");
+            }
+            break;
+
+          default:
+            return;
         }
       }
 
