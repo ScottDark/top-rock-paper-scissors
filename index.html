@@ -15,24 +15,27 @@
         computerSelection = Math.floor(Math.random() * (max - min + 1) + min);
 
         // Computer Selection to console
+        if (playerSelection === !0) {
+          switch (computerSelection) {
+            case 1:
+              console.log("Computer chose: Rock!");
+              return computerSelection;
+              break;
 
-        switch (computerSelection) {
-          case 1:
-            console.log("Computer chose: Rock!");
-            return computerSelection;
-            break;
+            case 2:
+              console.log("Computer chose: Paper!");
+              return computerSelection;
+              break;
 
-          case 2:
-            console.log("Computer chose: Paper!");
-            return computerSelection;
-            break;
-
-          case 3:
-            console.log("Computer chose: Scissors!");
-            return computerSelection;
-            break;
-          default:
-            console.log("Error selecting computer choice.");
+            case 3:
+              console.log("Computer chose: Scissors!");
+              return computerSelection;
+              break;
+            default:
+              console.log("Error selecting computer choice.");
+          }
+        } else {
+          console.log("Exiting game");
         }
       }
       // Prompt user Rock, Paper. Scissors selection
