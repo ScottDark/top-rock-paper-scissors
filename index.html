@@ -15,6 +15,7 @@
         computerSelection = Math.floor(Math.random() * (max - min + 1) + min);
 
         // Convert compResult to string eg. Rock = 1, Paper = 2, Scissors = 3.
+
         switch (computerSelection) {
           case 1:
             console.log("Computer chose: Rock");
@@ -34,16 +35,20 @@
         return computerSelection;
       }
       // Prompt user Rock, Paper. Scissors selection
+
       function getPlayerChoice() {
         playerSelection = prompt(
           "Select choice:\n1 - Rock \n2 - Paper \n3 - Scissors"
         );
         switch (playerSelection) {
-          case 1:
+          case "1":
+            console.log("You chose Rock!");
             break;
-          case 2:
+          case "2":
+            console.log("You chose Paper!");
             break;
-          case 3:
+          case "3":
+            console.log("You chose Scissors!");
             break;
           default:
             // No selection made or wrong selection alert user.
