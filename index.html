@@ -6,28 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TOP Project - Rock-Paper-Scissors</title>
     <script>
+      let compResult;
+
       //   Random computer choice eg. rock, paper, scissors
+
       function getComputerChoice(min, max) {
-        return Math.floor(Math.random() * (max - min + 1) + min);
+        compResult = Math.floor(Math.random() * (max - min + 1) + min);
+
+        // Convert compResult to string eg. Rock = 1, Paper = 2, Scissors = 3.
+        switch (compResult) {
+          case 1:
+            console.log("Computer chose: Rock");
+            break;
+          case 2:
+            console.log("Computer chose: Paper");
+            break;
+          case 3:
+            console.log("Computer chose: Scissors");
+            break;
+          default:
+            console.log("Error selecting computer choice.");
+        }
+        return compResult;
       }
 
       // Call function to get random computer choice.
-      let compResult = getComputerChoice(1, 3);
-
-      // Convert compResult to string eg. Rock = 1, Paper = 2, Scissors = 3.
-      switch (compResult) {
-        case 1:
-          console.log("Computer choose: Rock");
-          break;
-        case 2:
-          console.log("Computer choose: Paper");
-          break;
-        case 3:
-          console.log("Computer choose: Scissors");
-          break;
-        default:
-          console.log("Error selecting computer choice.");
-      }
+      getComputerChoice(1, 3);
     </script>
   </head>
   <body></body>
