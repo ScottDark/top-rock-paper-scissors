@@ -6,6 +6,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: black;
+  box-sizing: border-box;
 }
 
 .rpsButtons,
@@ -14,7 +15,10 @@ body {
   justify-content: center;
   align-items: center;
   flex: 1;
-  margin-bottom: 10rem;
+}
+
+.rpsButtons {
+  padding-top: 10vh;
 }
 .btn {
   display: flex;
@@ -25,9 +29,9 @@ body {
 }
 
 .resultsContainer {
+  display: flex;
   flex-direction: column;
-  position: relative;
-  bottom: 30vh;
+  padding-bottom: 40vh;
 }
 
 h1,

@@ -95,11 +95,13 @@ function getRoundResult(playerChoice) {
 
 /* Returns: Updated win/lose/tie result */
 function runningResults() {
-  const runningResult = document.querySelector(".runningResult");
+  const runningWins = document.querySelector(".runningWins");
+  const runningLoss = document.querySelector(".runningLoss");
+  const runningWTies = document.querySelector(".runningWTies");
 
-  runningResult.textContent = setWinCounter;
-  runningResult.textContent = setLossCounter;
-  runningResult.textContent = setTieCounter;
+  runningWins.textContent = "Wins: " + setWinCounter;
+  runningLoss.textContent = "Loss: " + setLossCounter;
+  runningWTies.textContent = "Ties: " + setTieCounter;
 }
 
 /* Returns: Result of game */
