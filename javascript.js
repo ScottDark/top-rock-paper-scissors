@@ -11,8 +11,8 @@ let roundCounter = 0;
 // Functions Start
 
 /* // Random computer choice eg. rock, paper, scissors */
-function getComputerChoice(min, max) {
-  computerSelection = Math.floor(Math.random() * (max - min + 1) + min);
+function getComputerChoice() {
+  computerSelection = Math.floor(Math.random() * 3) + 1;
 
   // Computer Selection to console
   switch (computerSelection) {
@@ -36,6 +36,7 @@ function getComputerChoice(min, max) {
 }
 
 function playRound() {
+  getComputerChoice();
   const playerSelection = this.id;
 
   switch (playerSelection) {
