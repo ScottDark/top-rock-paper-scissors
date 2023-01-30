@@ -3,7 +3,7 @@ const ROCK = "Rock";
 const PAPER = "Paper";
 const SCISSORS = "Scissors";
 
-let computerSelection;
+let computerChoice;
 let playerChoice;
 let roundCounter = 0;
 
@@ -12,50 +12,50 @@ let roundCounter = 0;
 /* // Random computer choice eg. rock, paper, scissors */
 function getComputerChoice() {
   //Generates computer selection between 1-3
-  computerSelection = Math.floor(Math.random() * 3) + 1;
+  computerChoice = Math.floor(Math.random() * 3) + 1;
 
   // Computer Selection
-  switch (computerSelection) {
+  switch (computerChoice) {
     case 1:
-      return (computerSelection = ROCK);
+      return (computerChoice = ROCK);
 
     case 2:
-      return (computerSelection = PAPER);
+      return (computerChoice = PAPER);
 
     case 3:
-      return (computerSelection = SCISSORS);
+      return (computerChoice = SCISSORS);
 
     default:
       break;
   }
 }
 
-function getPlayerChoice(playerChoice) {
+function getRoundResult(playerChoice) {
   const results = document.getElementById(".results");
 
   switch (playerChoice) {
     case "Rock":
-      if (computerSelection === ROCK) {
+      if (computerChoice === ROCK) {
         return "Tie!";
-      } else if (computerSelection === PAPER) {
+      } else if (computerChoice === PAPER) {
         return "You lose!";
       } else {
         return "You win!";
       }
 
     case "Paper":
-      if (computerSelection === PAPER) {
+      if (computerChoice === PAPER) {
         return "Tie!";
-      } else if (computerSelection === ROCK) {
+      } else if (computerChoice === ROCK) {
         return "You win!";
       } else {
         return "You lose!";
       }
 
     case "Scissors":
-      if (computerSelection === SCISSORS) {
+      if (computerChoice === SCISSORS) {
         return "Tie!";
-      } else if (computerSelection === ROCK) {
+      } else if (computerChoice === ROCK) {
         return "You lose!";
       } else {
         return "You win!";
@@ -67,9 +67,9 @@ function getPlayerChoice(playerChoice) {
 }
 
 function playRound() {
-  const playerSelection = this.id;
+  const playerChoice = this.id;
   getComputerChoice();
-  getPlayerChoice(playerSelection);
+  getRoundResult(playerChoice);
 }
 
 /* Log event to console */
