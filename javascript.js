@@ -2,6 +2,7 @@
 const ROCK = "Rock";
 const PAPER = "Paper";
 const SCISSORS = "Scissors";
+
 const TIE = "You TIE this round";
 const LOSE = "You LOSE this round";
 const WIN = "You WIN this round";
@@ -38,7 +39,7 @@ function getRoundResult(playerChoice) {
   let resultNode;
 
   switch (playerChoice) {
-    case "Rock":
+    case ROCK:
       if (computerChoice === ROCK) {
         roundResult.textContent = TIE;
         break;
@@ -50,7 +51,7 @@ function getRoundResult(playerChoice) {
         break;
       }
 
-    case "Paper":
+    case PAPER:
       if (computerChoice === PAPER) {
         roundResult.textContent = TIE;
         break;
@@ -62,7 +63,7 @@ function getRoundResult(playerChoice) {
         break;
       }
 
-    case "Scissors":
+    case SCISSORS:
       if (computerChoice === SCISSORS) {
         roundResult.textContent = TIE;
         break;
