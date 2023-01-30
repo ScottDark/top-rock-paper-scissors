@@ -1,0 +1,36 @@
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+}
+
+.rpsButtons,
+.resultsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  margin-bottom: 10rem;
+}
+.btn {
+  display: flex;
+  margin: 1rem;
+  border: solid black 3px;
+  font-size: 32px;
+  border-radius: 15px;
+}
+
+.resultsContainer {
+  position: relative;
+  bottom: 30vh;
+}
+
+h1,
+h3 {
+  display: flex;
+  color: white;
+}

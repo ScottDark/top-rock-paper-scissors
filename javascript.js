@@ -11,10 +11,10 @@ const LOSE_GAME = "You Lose the game!";
 const WIN_GAME = "You Win the game!";
 
 let computerChoice;
-let setRoundCounter,
-  setWinCounter,
-  setLossCounter,
-  setTieCounter = 0;
+let setRoundCounter = 0;
+let setWinCounter = 0;
+let setLossCounter = 0;
+let setTieCounter = 0;
 
 // Functions Start
 
@@ -96,6 +96,7 @@ function getRoundResult(playerChoice) {
 /* Returns: Updated win/lose/tie result */
 function runningResults() {
   const runningResult = document.querySelector(".runningResult");
+
   runningResult.textContent = setWinCounter;
   runningResult.textContent = setLossCounter;
   runningResult.textContent = setTieCounter;
@@ -112,6 +113,7 @@ function playRound() {
   const playerChoice = this.id;
   getComputerChoice();
   getRoundResult(playerChoice);
+  runningResults();
   determineGameResult();
 }
 
