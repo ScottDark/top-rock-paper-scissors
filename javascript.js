@@ -10,7 +10,7 @@ let roundCounter = 0;
 
 // Functions Start
 
-// Random computer choice eg. rock, paper, scissors
+/* // Random computer choice eg. rock, paper, scissors */
 function getComputerChoice(min, max) {
   computerSelection = Math.floor(Math.random() * (max - min + 1) + min);
 
@@ -35,7 +35,7 @@ function getComputerChoice(min, max) {
   }
 }
 
-// Prompt user Rock, Paper. Scissors selection
+/* // Prompt user Rock, Paper. Scissors selection */
 function getPlayerChoice() {
   playerSelection = +prompt(
     "Select choice:\n1 - Rock \n2 - Paper \n3 - Scissors"
@@ -67,7 +67,7 @@ function getPlayerChoice() {
   }
 }
 
-// Play a round
+/* // Play a round */
 function playRound(playerSelection, computerSelection) {
   switch (playerSelection) {
     // Game Logic
@@ -109,11 +109,12 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-// Starts the game
+/* // Starts the game */
 function game() {}
 
-function log() {
-  console.log("Clicked");
+/* Log event to console */
+function log(event) {
+  console.log(event.target.innerHTML);
 }
 
 // Functions End
@@ -122,7 +123,7 @@ function log() {
 const buttons = document.querySelectorAll(".btn");
 
 buttons.forEach(function (button) {
-  button.addEventListener("click", playRound);
+  button.addEventListener("click", log);
 });
 
 //Call Function to start game
