@@ -74,13 +74,10 @@ function playRound(playerSelection, computerSelection) {
     // Player Rock
     case 1:
       if (computerSelection === ROCK) {
-        //   console.log("Tie!");
         return (roundResults = "Tie!");
       } else if (computerSelection === PAPER) {
-        //   console.log("You lose!");
         return (roundResults = "You lose!");
       } else {
-        //   console.log("You win!");
         return (roundResults = "You win!");
       }
       break;
@@ -88,13 +85,10 @@ function playRound(playerSelection, computerSelection) {
     // Player Paper
     case 2:
       if (computerSelection === PAPER) {
-        //   console.log("Tie!");
         return (roundResults = "Tie!");
       } else if (computerSelection === ROCK) {
-        //   console.log("You win!");
         return (roundResults = "You win!");
       } else {
-        //   console.log("You lose!");
         return (roundResults = "You lose!");
       }
       break;
@@ -102,13 +96,10 @@ function playRound(playerSelection, computerSelection) {
     // Player Scissors
     case 3:
       if (computerSelection === SCISSORS) {
-        //   console.log("Tie!");
         return (roundResults = "Tie!");
       } else if (computerSelection === ROCK) {
-        //   console.log("You lose!");
         return (roundResults = "You lose!");
       } else {
-        //   console.log("You win!");
         return (roundResults = "You win!");
       }
       break;
@@ -122,6 +113,8 @@ function playRound(playerSelection, computerSelection) {
 function game() {}
 
 // Functions End
+
+// Event listeners
 
 //Call Function to start game
 game();
