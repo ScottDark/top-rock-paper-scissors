@@ -7,6 +7,7 @@ const LOSE = "You LOSE this round";
 const WIN = "You WIN this round";
 
 let computerChoice;
+let setRoundCounter = 0;
 
 // Functions Start
 
@@ -29,7 +30,7 @@ function getComputerChoice() {
       break;
   }
 }
-
+/* Returns: Result of round */
 function getRoundResult(playerChoice) {
   const roundResult = document.querySelector(".roundResult");
 
@@ -74,7 +75,7 @@ function getRoundResult(playerChoice) {
       break;
   }
 }
-
+/* Plays a round */
 function playRound() {
   const playerChoice = this.id;
   getComputerChoice();
