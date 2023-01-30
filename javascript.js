@@ -36,8 +36,6 @@ function playRound() {
   const playerSelection = this.id;
 
   switch (playerSelection) {
-    // Game Logic
-    // Player Rock
     case "Rock":
       if (computerSelection === ROCK) {
         return (roundResults = "Tie!");
@@ -47,7 +45,6 @@ function playRound() {
         return (roundResults = "You win!");
       }
 
-    // Player Paper
     case "Paper":
       if (computerSelection === PAPER) {
         return (roundResults = "Tie!");
@@ -57,7 +54,6 @@ function playRound() {
         return (roundResults = "You lose!");
       }
 
-    // Player Scissors
     case "Scissors":
       if (computerSelection === SCISSORS) {
         return (roundResults = "Tie!");
