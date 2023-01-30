@@ -112,9 +112,18 @@ function playRound(playerSelection, computerSelection) {
 // Starts the game
 function game() {}
 
+function log() {
+  console.log("Clicked");
+}
+
 // Functions End
 
-// Event listeners
+// Button event listeners
+const buttons = document.querySelectorAll(".btn");
+
+buttons.forEach(function (button) {
+  button.addEventListener("click", playRound);
+});
 
 //Call Function to start game
 game();
