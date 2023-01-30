@@ -8,8 +8,6 @@ const LOSE = "You LOSE this round";
 const WIN = "You WIN this round";
 
 let computerChoice;
-let playerChoice;
-let roundCounter = 0;
 
 // Functions Start
 
@@ -36,7 +34,6 @@ function getComputerChoice() {
 
 function getRoundResult(playerChoice) {
   const roundResult = document.querySelector(".roundResult");
-  let resultNode;
 
   switch (playerChoice) {
     case ROCK:
