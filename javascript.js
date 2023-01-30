@@ -4,7 +4,7 @@ const PAPER = "Paper";
 const SCISSORS = "Scissors";
 
 let computerSelection;
-let playerSelection;
+let playerChoice;
 let roundCounter = 0;
 
 // Functions Start
@@ -30,11 +30,10 @@ function getComputerChoice() {
   }
 }
 
-function playRound() {
-  getComputerChoice();
-  const playerSelection = this.id;
+function getPlayerChoice(playerChoice) {
+  const results = document.getElementById(".results");
 
-  switch (playerSelection) {
+  switch (playerChoice) {
     case "Rock":
       if (computerSelection === ROCK) {
         return "Tie!";
@@ -67,8 +66,11 @@ function playRound() {
   }
 }
 
-/* // Starts the game */
-function game() {}
+function playRound() {
+  const playerSelection = this.id;
+  getComputerChoice();
+  getPlayerChoice(playerSelection);
+}
 
 /* Log event to console */
 function log(event) {
@@ -83,6 +85,3 @@ const buttons = document.querySelectorAll(".btn");
 buttons.forEach(function (button) {
   button.addEventListener("click", playRound);
 });
-
-//Call Function to start game
-game();
