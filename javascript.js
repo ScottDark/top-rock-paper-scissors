@@ -5,7 +5,6 @@ const SCISSORS = "Scissors";
 
 let computerSelection;
 let playerSelection;
-let roundResults;
 let roundCounter = 0;
 
 // Functions Start
@@ -38,29 +37,29 @@ function playRound() {
   switch (playerSelection) {
     case "Rock":
       if (computerSelection === ROCK) {
-        return (roundResults = "Tie!");
+        return "Tie!";
       } else if (computerSelection === PAPER) {
-        return (roundResults = "You lose!");
+        return "You lose!";
       } else {
-        return (roundResults = "You win!");
+        return "You win!";
       }
 
     case "Paper":
       if (computerSelection === PAPER) {
-        return (roundResults = "Tie!");
+        return "Tie!";
       } else if (computerSelection === ROCK) {
-        return (roundResults = "You win!");
+        return "You win!";
       } else {
-        return (roundResults = "You lose!");
+        return "You lose!";
       }
 
     case "Scissors":
       if (computerSelection === SCISSORS) {
-        return (roundResults = "Tie!");
+        return "Tie!";
       } else if (computerSelection === ROCK) {
-        return (roundResults = "You lose!");
+        return "You lose!";
       } else {
-        return (roundResults = "You win!");
+        return "You win!";
       }
 
     default:
