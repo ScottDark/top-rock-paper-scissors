@@ -10,7 +10,8 @@ body {
 }
 
 .rpsButtons,
-.resultsContainer {
+.resultsContainer,
+.gameResult {
   display: flex;
   justify-content: center;
   align-items: center;

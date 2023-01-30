@@ -98,25 +98,35 @@ function runningResults() {
   const runningWins = document.querySelector(".runningWins");
   const runningLoss = document.querySelector(".runningLoss");
   const runningWTies = document.querySelector(".runningWTies");
+  const runningTotal = document.querySelector(".runningTotal");
 
   runningWins.textContent = "Wins: " + setWinCounter;
   runningLoss.textContent = "Loss: " + setLossCounter;
   runningWTies.textContent = "Ties: " + setTieCounter;
+  runningTotal.textContent = "Rounds: " + setRoundCounter;
 }
 
 /* Returns: Result of game */
 function determineGameResult() {
-  if (setLossCounter === 3) {
+  const gameResult = document.querySelector(".gameResult");
+  if (setWinCounter >= 5) {
+    gameResult.textContent = "Congratulations! You Win!";
+  } else if (setLossCounter >= 5) {
+    gameResult.textContent = "Congratulations! You Lose! :)";
+  } else {
+    return;
   }
 }
 
 /* Plays a round */
+
 function playRound() {
   const playerChoice = this.id;
+
   getComputerChoice();
   getRoundResult(playerChoice);
-  runningResults();
   determineGameResult();
+  runningResults();
 }
 
 // Functions End
