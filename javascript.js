@@ -9,7 +9,7 @@ let roundCounter = 0;
 
 // Functions Start
 
-/* // Random computer choice eg. rock, paper, scissors */
+/* Random computer choice eg. rock, paper, scissors */
 function getComputerChoice() {
   //Generates computer selection between 1-3
   computerChoice = Math.floor(Math.random() * 3) + 1;
