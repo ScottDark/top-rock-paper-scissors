@@ -31,38 +31,50 @@ function getComputerChoice() {
 }
 
 function getRoundResult(playerChoice) {
-  const results = document.getElementById(".results");
+  const resultsContainer = document.querySelector(".resultsContainer");
+  const h1 = document.createElement("h1");
+  resultsContainer.appendChild(h1);
+  let resultNode;
 
   switch (playerChoice) {
     case "Rock":
       if (computerChoice === ROCK) {
-        return "Tie!";
+        ("Tie!");
+        break;
       } else if (computerChoice === PAPER) {
-        return "You lose!";
+        ("You lose!");
+        break;
       } else {
-        return "You win!";
+        ("You win!");
+        break;
       }
 
     case "Paper":
       if (computerChoice === PAPER) {
-        return "Tie!";
+        ("Tie!");
+        break;
       } else if (computerChoice === ROCK) {
-        return "You win!";
+        ("You win!");
+        break;
       } else {
-        return "You lose!";
+        ("You lose!");
+        break;
       }
 
     case "Scissors":
       if (computerChoice === SCISSORS) {
-        return "Tie!";
+        ("Tie!");
+        break;
       } else if (computerChoice === ROCK) {
-        return "You lose!";
+        ("You lose!");
+        break;
       } else {
-        return "You win!";
+        ("You win!");
+        break;
       }
 
     default:
-      return;
+      break;
   }
 }
 
