@@ -35,84 +35,49 @@ function getComputerChoice(min, max) {
   }
 }
 
-// /* // Prompt user Rock, Paper. Scissors selection */
-// function getPlayerChoice() {
-//   playerSelection = +prompt(
-//     "Select choice:\n1 - Rock \n2 - Paper \n3 - Scissors"
-//   );
-//   switch (playerSelection) {
-//     case 1:
-//       console.log("You chose Rock!");
-//       return playerSelection;
-//       break;
-
-//     case 2:
-//       console.log("You chose Paper!");
-//       return playerSelection;
-//       break;
-
-//     case 3:
-//       console.log("You chose Scissors!");
-//       return playerSelection;
-//       break;
-
-//     default:
-//       // No selection made or wrong selection, alert user
-//       if (playerSelection === 0) {
-//         alert("Exiting game, reload to try again");
-//       } else {
-//         alert("Please select either 1, 2, 3");
-//         getPlayerChoice();
-//       }
-//   }
-// }
-
 function playRound() {
-  let btn = this.id;
-  console.log(btn);
+  const playerSelection = this.id;
+
+  switch (playerSelection) {
+    // Game Logic
+    // Player Rock
+    case "Rock":
+      if (computerSelection === ROCK) {
+        return (roundResults = "Tie!");
+      } else if (computerSelection === PAPER) {
+        return (roundResults = "You lose!");
+      } else {
+        return (roundResults = "You win!");
+      }
+      break;
+
+    // Player Paper
+    case "Paper":
+      if (computerSelection === PAPER) {
+        return (roundResults = "Tie!");
+      } else if (computerSelection === ROCK) {
+        return (roundResults = "You win!");
+      } else {
+        return (roundResults = "You lose!");
+      }
+      break;
+
+    // Player Scissors
+    case "Scissors":
+      if (computerSelection === SCISSORS) {
+        return (roundResults = "Tie!");
+      } else if (computerSelection === ROCK) {
+        return (roundResults = "You lose!");
+      } else {
+        return (roundResults = "You win!");
+      }
+      break;
+
+    default:
+      return;
+  }
+  debugger;
 }
-
-// /* // Play a round */
-// function playRound(playerSelection, computerSelection) {
-//   switch (playerSelection) {
-//     // Game Logic
-//     // Player Rock
-//     case "Rock":
-//       if (computerSelection === ROCK) {
-//         return (roundResults = "Tie!");
-//       } else if (computerSelection === PAPER) {
-//         return (roundResults = "You lose!");
-//       } else {
-//         return (roundResults = "You win!");
-//       }
-//       break;
-
-//     // Player Paper
-//     case "Paper":
-//       if (computerSelection === PAPER) {
-//         return (roundResults = "Tie!");
-//       } else if (computerSelection === ROCK) {
-//         return (roundResults = "You win!");
-//       } else {
-//         return (roundResults = "You lose!");
-//       }
-//       break;
-
-//     // Player Scissors
-//     case "Scissors":
-//       if (computerSelection === SCISSORS) {
-//         return (roundResults = "Tie!");
-//       } else if (computerSelection === ROCK) {
-//         return (roundResults = "You lose!");
-//       } else {
-//         return (roundResults = "You win!");
-//       }
-//       break;
-
-//     default:
-//       return;
-//   }
-// }
 
 /* // Starts the game */
 function game() {}
