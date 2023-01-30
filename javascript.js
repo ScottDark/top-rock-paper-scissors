@@ -1,7 +1,7 @@
 // Variables
-const ROCK = 1;
-const PAPER = 2;
-const SCISSORS = 3;
+const ROCK = "Rock";
+const PAPER = "Paper";
+const SCISSORS = "Scissors";
 
 let computerSelection;
 let playerSelection;
@@ -12,26 +12,22 @@ let roundCounter = 0;
 
 /* // Random computer choice eg. rock, paper, scissors */
 function getComputerChoice() {
+  //Generates computer selection between 1-3
   computerSelection = Math.floor(Math.random() * 3) + 1;
 
-  // Computer Selection to console
+  // Computer Selection
   switch (computerSelection) {
     case 1:
-      console.log("Computer chose: Rock!");
-      return computerSelection;
-      break;
+      return (computerSelection = ROCK);
 
     case 2:
-      console.log("Computer chose: Paper!");
-      return computerSelection;
-      break;
+      return (computerSelection = PAPER);
 
     case 3:
-      console.log("Computer chose: Scissors!");
-      return computerSelection;
-      break;
+      return (computerSelection = SCISSORS);
+
     default:
-      console.log("Error selecting computer choice.");
+      break;
   }
 }
 
@@ -77,7 +73,6 @@ function playRound() {
     default:
       return;
   }
-  debugger;
 }
 
 /* // Starts the game */
