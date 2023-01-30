@@ -23,6 +23,9 @@ buttons.forEach(function (button) {
   button.addEventListener("click", playRound);
 });
 
+const reset = document.querySelector("#Reset");
+reset.addEventListener("click", resetGame);
+
 // Functions Start
 
 /* Returns: Either Rock, Paper, Scissors at random - CPU */
@@ -127,7 +130,7 @@ function determineGameResult() {
 
 /* Resets game */
 function resetGame() {
-  document.getElementById(".resultsContainer").reset();
+  window.location.reload();
 }
 
 /* Plays a round */

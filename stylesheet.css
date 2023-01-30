@@ -22,7 +22,8 @@ body {
 .rpsButtons {
   padding-top: 10vh;
 }
-.btn {
+.btn,
+#Reset {
   display: flex;
   margin: 1rem;
   border: solid purple 3px;
