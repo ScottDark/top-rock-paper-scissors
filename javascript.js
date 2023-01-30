@@ -46,7 +46,6 @@ function playRound() {
       } else {
         return (roundResults = "You win!");
       }
-      break;
 
     // Player Paper
     case "Paper":
@@ -57,7 +56,6 @@ function playRound() {
       } else {
         return (roundResults = "You lose!");
       }
-      break;
 
     // Player Scissors
     case "Scissors":
@@ -68,7 +66,6 @@ function playRound() {
       } else {
         return (roundResults = "You win!");
       }
-      break;
 
     default:
       return;
