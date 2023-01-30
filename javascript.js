@@ -31,54 +31,43 @@ function getComputerChoice() {
 }
 
 function getRoundResult(playerChoice) {
-  const resultsContainer = document.querySelector(".resultsContainer");
-  const h1 = document.createElement("h1");
-  resultsContainer.appendChild(h1);
+  const roundResult = document.querySelector(".roundResult");
   let resultNode;
 
   switch (playerChoice) {
     case "Rock":
       if (computerChoice === ROCK) {
-        resultNode = document.createTextNode("Tie");
-        h1.appendChild(resultNode);
+        roundResult.textContent = "Tie";
         break;
       } else if (computerChoice === PAPER) {
-        resultNode = document.createTextNode("You lose this round");
-        h1.appendChild(resultNode);
+        roundResult.textContent = "You lose this round";
         break;
       } else {
-        resultNode = document.createTextNode("You win this round");
-        h1.appendChild(resultNode);
+        roundResult.textContent = "You win this round";
         break;
       }
 
     case "Paper":
       if (computerChoice === PAPER) {
-        resultNode = document.createTextNode("Tie");
-        h1.appendChild(resultNode);
+        roundResult.textContent = "Tie";
         break;
       } else if (computerChoice === ROCK) {
-        resultNode = document.createTextNode("You win this round");
-        h1.appendChild(resultNode);
+        roundResult.textContent = "You win this round";
         break;
       } else {
-        resultNode = document.createTextNode("You lose this round");
-        h1.appendChild(resultNode);
+        roundResult.textContent = "You lose this round";
         break;
       }
 
     case "Scissors":
       if (computerChoice === SCISSORS) {
-        resultNode = document.createTextNode("Tie");
-        h1.appendChild(resultNode);
+        roundResult.textContent = "Tie";
         break;
       } else if (computerChoice === ROCK) {
-        resultNode = document.createTextNode("You lose this round");
-        h1.appendChild(resultNode);
+        roundResult.textContent = "You lose this round";
         break;
       } else {
-        resultNode = document.createTextNode("You win this round");
-        h1.appendChild(resultNode);
+        roundResult.textContent = "You win this round";
         break;
       }
 
