@@ -1,4 +1,3 @@
-// Variables
 const ROCK = "Rock";
 const PAPER = "Paper";
 const SCISSORS = "Scissors";
@@ -11,12 +10,11 @@ let computerChoice;
 
 // Functions Start
 
-/* Random computer choice eg. rock, paper, scissors */
+/* Returns: Either Rock, Paper, Scissors at random */
 function getComputerChoice() {
   //Generates computer selection between 1-3
   computerChoice = Math.floor(Math.random() * 3) + 1;
 
-  // Computer Selection
   switch (computerChoice) {
     case 1:
       return (computerChoice = ROCK);
@@ -81,11 +79,6 @@ function playRound() {
   const playerChoice = this.id;
   getComputerChoice();
   getRoundResult(playerChoice);
-}
-
-/* Log event to console */
-function log(event) {
-  console.log(event.target.innerHTML);
 }
 
 // Functions End
