@@ -39,37 +39,46 @@ function getRoundResult(playerChoice) {
   switch (playerChoice) {
     case "Rock":
       if (computerChoice === ROCK) {
-        ("Tie!");
+        resultNode = document.createTextNode("Tie");
+        h1.appendChild(resultNode);
         break;
       } else if (computerChoice === PAPER) {
-        ("You lose!");
+        resultNode = document.createTextNode("You lose this round");
+        h1.appendChild(resultNode);
         break;
       } else {
-        ("You win!");
+        resultNode = document.createTextNode("You win this round");
+        h1.appendChild(resultNode);
         break;
       }
 
     case "Paper":
       if (computerChoice === PAPER) {
-        ("Tie!");
+        resultNode = document.createTextNode("Tie");
+        h1.appendChild(resultNode);
         break;
       } else if (computerChoice === ROCK) {
-        ("You win!");
+        resultNode = document.createTextNode("You win this round");
+        h1.appendChild(resultNode);
         break;
       } else {
-        ("You lose!");
+        resultNode = document.createTextNode("You lose this round");
+        h1.appendChild(resultNode);
         break;
       }
 
     case "Scissors":
       if (computerChoice === SCISSORS) {
-        ("Tie!");
+        resultNode = document.createTextNode("Tie");
+        h1.appendChild(resultNode);
         break;
       } else if (computerChoice === ROCK) {
-        ("You lose!");
+        resultNode = document.createTextNode("You lose this round");
+        h1.appendChild(resultNode);
         break;
       } else {
-        ("You win!");
+        resultNode = document.createTextNode("You win this round");
+        h1.appendChild(resultNode);
         break;
       }
 
