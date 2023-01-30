@@ -2,6 +2,9 @@
 const ROCK = "Rock";
 const PAPER = "Paper";
 const SCISSORS = "Scissors";
+const TIE = "You TIE this round";
+const LOSE = "You LOSE this round";
+const WIN = "You WIN this round";
 
 let computerChoice;
 let playerChoice;
@@ -37,37 +40,37 @@ function getRoundResult(playerChoice) {
   switch (playerChoice) {
     case "Rock":
       if (computerChoice === ROCK) {
-        roundResult.textContent = "Tie";
+        roundResult.textContent = TIE;
         break;
       } else if (computerChoice === PAPER) {
-        roundResult.textContent = "You lose this round";
+        roundResult.textContent = LOSE;
         break;
       } else {
-        roundResult.textContent = "You win this round";
+        roundResult.textContent = WIN;
         break;
       }
 
     case "Paper":
       if (computerChoice === PAPER) {
-        roundResult.textContent = "Tie";
+        roundResult.textContent = TIE;
         break;
       } else if (computerChoice === ROCK) {
-        roundResult.textContent = "You win this round";
+        roundResult.textContent = WIN;
         break;
       } else {
-        roundResult.textContent = "You lose this round";
+        roundResult.textContent = LOSE;
         break;
       }
 
     case "Scissors":
       if (computerChoice === SCISSORS) {
-        roundResult.textContent = "Tie";
+        roundResult.textContent = TIE;
         break;
       } else if (computerChoice === ROCK) {
-        roundResult.textContent = "You lose this round";
+        roundResult.textContent = LOSE;
         break;
       } else {
-        roundResult.textContent = "You win this round";
+        roundResult.textContent = WIN;
         break;
       }
 
