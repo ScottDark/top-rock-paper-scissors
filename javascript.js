@@ -16,6 +16,13 @@ let setWinCounter = 0;
 let setLossCounter = 0;
 let setTieCounter = 0;
 
+// Button event listeners
+const buttons = document.querySelectorAll(".btn");
+
+buttons.forEach(function (button) {
+  button.addEventListener("click", playRound);
+});
+
 // Functions Start
 
 /* Returns: Either Rock, Paper, Scissors at random - CPU */
@@ -118,8 +125,12 @@ function determineGameResult() {
   }
 }
 
-/* Plays a round */
+/* Resets game */
+function resetGame() {
+  document.getElementById(".resultsContainer").reset();
+}
 
+/* Plays a round */
 function playRound() {
   const playerChoice = this.id;
 
@@ -130,10 +141,3 @@ function playRound() {
 }
 
 // Functions End
-
-// Button event listeners
-const buttons = document.querySelectorAll(".btn");
-
-buttons.forEach(function (button) {
-  button.addEventListener("click", playRound);
-});
